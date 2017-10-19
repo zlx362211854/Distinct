@@ -15,7 +15,7 @@ exports.getFile = (dirname) => {
     });
 
     data.length > 0 && data.forEach(item => {
-        source.push(item.split('\r').filter(Boolean))
+        source.push(item.split(/\r?\n/).filter(Boolean))
     });
 
     source.forEach(item => {
