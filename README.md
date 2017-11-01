@@ -3,10 +3,10 @@
 ## run
 
 ```
-npm i
+npm install
 ```
 
 ```
-node index.js
+npm run start
 
 ```
