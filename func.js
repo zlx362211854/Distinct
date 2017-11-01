@@ -2,8 +2,9 @@
  * Created by saidesun on 17/10/17.
  */
 const fs = require('fs');
+var iconv = require('iconv-lite');
 exports.getFile = (dirname) => {
-    const data = [], source = [], names = [], sourceObj = [];
+    const data = [], source = [], names = [], sourceArr = [];
     // 遍历文件夹,得到文件名的数组
     const dir = fs.readdirSync(dirname);
 
@@ -22,10 +23,9 @@ exports.getFile = (dirname) => {
         item.forEach(i => {
             const arr = i.split(',');
             names.push(arr[0].trim());
-            sourceObj.push({name: arr[0], sex: arr[1], note: arr[2]})
+    sourceArr.push({name: arr[0], sex: arr[1], note: arr[2]})
         })
     });
-
-    return {names, sourceObj}
+    return {names, sourceArr}
 
 };
