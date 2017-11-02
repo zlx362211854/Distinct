@@ -5,6 +5,7 @@ const fs = require('fs');
 const getData = require('./func');
 const data = getData.getFile('./input'); // 数据地址
 const stringify = require('csv-stringify');
+
 const savePath = './output'; // 处理后保存地址
 
 if (data) {
