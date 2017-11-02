@@ -2,9 +2,9 @@
  * Created by saidesun on 17/10/17.
  */
 const fs = require('fs');
-var getData = require('./func');
+const getData = require('./func');
 const data = getData.getFile('./input'); // 数据地址
-var stringify = require('csv-stringify');
+const stringify = require('csv-stringify');
 const savePath = './output'; // 处理后保存地址
 
 if (data) {
